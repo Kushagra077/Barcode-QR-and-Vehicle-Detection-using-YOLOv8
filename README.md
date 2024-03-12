@@ -14,18 +14,6 @@ This project implements a web application for detecting barcodes, QR codes, and 
 - **Detection:** Run detection on the uploaded image.
 - **Results Display:** View the detection results directly on the web interface.
 
-## Models
-
-- **Vehicle Detection (YOLOv8):** Trained on a dataset for top-view vehicle detection.
-- **Barcode-QR Detection (YOLOv8):** Trained on a dataset for detecting barcodes and QR codes.
-
-## Features
-
-- **Model Selection:** Choose between barcode/QR code detection and vehicle detection.
-- **Upload Image:** Upload an image containing objects for detection.
-- **Detection:** Run detection on the uploaded image.
-- **Results Display:** View the detection results directly on the web interface.
-
 ## Requirements
 
 - Python 3.x
