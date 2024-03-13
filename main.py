@@ -15,7 +15,7 @@ def perform_inference(model, uploaded_image):
 
 # Streamlit app
 def main():
-    st.title("Object Detection App")
+    st.title("Barcode, QR Code and Vehicle Detection Application")
 
     # Sidebar - Model selection
     selected_model = st.sidebar.radio("Select Model", ("Barcode-QR", "Vehicle"))
