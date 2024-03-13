@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 from ultralytics import YOLO
+import dill
 
 # Load YOLO models
 vehicle_model = YOLO('vehicle.pt')
