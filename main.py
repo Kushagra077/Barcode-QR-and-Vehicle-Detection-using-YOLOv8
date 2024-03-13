@@ -34,9 +34,26 @@ def main():
 
         if st.button("Run Detection"):
             with st.spinner('Running inference...'):
-                results = perform_inference(model, uploaded_image)
-                for result in results:
-                    result.show()
+                try:
+                    # Perform inference
+                    results = perform_inference(model, uploaded_image)
+
+                    # Visualize and save results
+                    for i, r in enumerate(results):
+                        st.subheader(f"Result")
+                        
+                        # Plot results image
+                        im_bgr = r.plot()  # BGR-order numpy array
+                        im_rgb = Image.fromarray(im_bgr[..., ::-1])  # RGB-order PIL image
+                        st.image(im_rgb, caption=f"Result", use_column_width=True)
+
+                        # Save results to disk
+                        #filename = f'results_{selected_model}_{i}.jpg'
+                        #r.save(filename=filename)
+                        #st.markdown(f"Download [**{filename}**](/{filename})")
+                        
+                except Exception as e:
+                    st.error(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
